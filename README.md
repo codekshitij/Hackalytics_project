@@ -22,11 +22,11 @@ Access the application in your web browser at http://localhost:8501.
 
 
 # Dependencies
-Python 3.x
-Streamlit
-Scikit-learn
-Pandas
-NumPy
+- Python
+- Streamlit
+- Scikit-learn
+- Pandas
+- NumPy
 
 # Dataset
 https://www.kaggle.com/datasets/laavanya/human-stress-detection-in-and-through-sleep
