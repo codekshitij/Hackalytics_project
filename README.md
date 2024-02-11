@@ -14,11 +14,11 @@ Offers personalized insights and recommendations to improve sleep quality and re
 
 
 # Usage
-Install dependencies: Ensure Python and necessary libraries are installed.
-Clone the repository
-Navigate to the project directory
-Run the application: streamlit run app.py
-Access the application in your web browser at http://localhost:8501.
+- Install dependencies: Ensure Python and necessary libraries are installed.
+- Clone the repository
+- Navigate to the project directory
+- Run the application: streamlit run app.py
+- Access the application in your web browser at http://localhost:8501.
 
 
 # Dependencies
