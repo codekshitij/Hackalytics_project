@@ -50,7 +50,7 @@ def prediction_page(model):
     blood_oxygen = st.sidebar.slider('Blood Oxygen', min_value=0.0, max_value=100.0, value=50.0, step=1.0)
     rapid_eye_movement = st.sidebar.slider('Rapid Eye Movement', min_value=0.0, max_value=100.0, value=50.0, step=1.0)
     sleeping_hours = st.sidebar.slider('Sleeping Hours', min_value=0.0, max_value=100.0, value=50.0, step=1.0)
-    heart_rate = st.sidebar.slider('Heart Rate', min_value=0.0, max_value=100.0, value=50.0, step=1.0)
+    heart_rate = st.sidebar.slider('Heart Rate', min_value=0.0, max_value=9.0, value=5.0, step=1.0)
     
     input_data = [[snoring_rate, respiration_rate, body_temperature, limb_movement, blood_oxygen, rapid_eye_movement, sleeping_hours, heart_rate]]
     
