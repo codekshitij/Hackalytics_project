@@ -27,7 +27,7 @@ def home_page():
     st.image('app_image.png', use_column_width=True)
     st.button("About Us")
     
-    st.title("Welcome to SnoozZ Insights")
+    st.title("Welcome to SnoozZ Insights 🌙 ")
     st.write("""
     In today’s fast-paced world, a good night’s sleep is more than a luxury; it’s a cornerstone of health and happiness. SnoozZ Insights is designed to be your companion in the quest for restful nights and energized mornings.
 
