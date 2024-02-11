@@ -2,16 +2,16 @@ import streamlit as st
 import pickle
 
 # Load the trained model
-@st.cache(allow_output_mutation=True)
+@st.cache_data  # Updated from st.experimental_memo
 def load_model():
     with open('trained_model.pkl', 'rb') as file:
-        return pickle.load(file)  # Load the trained model from trained_model.pkl file
+        model = pickle.load(file)  # Load the trained model from trained_model.pkl file
+    return model
 
 # Function to make predictions
 def predict_stress_level(model, input_data):
     predicted_stress_level = model.predict(input_data)
     return predicted_stress_level[0]
-
 # Home page
 def home_page():
     gradient_css = """
@@ -34,13 +34,13 @@ def home_page():
     Our app doesn’t just track your sleep; it transforms it. By harnessing the power of advanced analytics and personalized insights, SnoozZ Insights offers a comprehensive overview of your sleep patterns. Understand the phases of your slumber, identify disturbances, and receive tailored advice to enhance the quality of your rest.
     """)
 
-# Streamlit app
-def main():
-    home_page()  # Display the homepage content
-    
-    # Load the trained model
-    model = load_model()
-    
+
+def prediction_page(model):
+   
+    st.title("Stress Level Prediction")
+
+    # User input for prediction
+    st.sidebar.header('User Input')
     # User input form
     st.sidebar.header('User Input')
     snoring_rate = st.sidebar.slider('Snoring Rate', min_value=0.0, max_value=100.0, value=50.0, step=1.0)
@@ -52,13 +52,27 @@ def main():
     sleeping_hours = st.sidebar.slider('Sleeping Hours', min_value=0.0, max_value=100.0, value=50.0, step=1.0)
     heart_rate = st.sidebar.slider('Heart Rate', min_value=0.0, max_value=100.0, value=50.0, step=1.0)
     
-    # Prepare user input for prediction
     input_data = [[snoring_rate, respiration_rate, body_temperature, limb_movement, blood_oxygen, rapid_eye_movement, sleeping_hours, heart_rate]]
     
-    # Make prediction
-    if st.sidebar.button('Predict'):
-        predicted_stress_level = predict_stress_level(model, input_data)
-        st.write(f'Predicted Stress Level: {predicted_stress_level}')
+     # Predict button
+    if st.button('Predict Stress Level'):
+        prediction = predict_stress_level(model, input_data)
+        st.write(f'Predicted Stress Level: {prediction}')
+    
+   
+    
+
+# Streamlit app
+def main():
+    st.sidebar.title("Navigation")
+    choice = st.sidebar.radio("Go to", ("Home", "Predict Stress Level"))
+
+    model = load_model()
+
+    if choice == "Home":
+        home_page()
+    elif choice == "Predict Stress Level":
+        prediction_page(model)
 
 if __name__ == '__main__':
     main()
