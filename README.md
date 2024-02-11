@@ -1,6 +1,8 @@
 # Stress Level Prediction in Sleep Patterns
 
-# Overview:
+![Image Name](app_image.png)
+
+# Overview
 This project aims to predict stress levels based on sleep patterns. By analyzing various characteristics of sleep, such as snoring rate, respiration rate, body temperature, limb movement, blood oxygen levels, rapid eye movement, sleeping hours, and heart rate, the system predicts the stress level experienced during sleep. Understanding stress levels during sleep can provide valuable insights into overall well-being and help individuals take proactive measures to improve sleep quality and manage stress effectively.
 
 
