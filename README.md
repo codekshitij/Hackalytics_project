@@ -1,3 +1,2 @@
-# Hackalytics  project 
-
-
+# NLP2SQL
+Hackalytics  project 

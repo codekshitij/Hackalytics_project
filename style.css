@@ -1,0 +1,12 @@
+/* style.css */
+body {
+    background-image: linear-gradient(to bottom, #0c0314, #500adb);
+    background-size: cover;
+    background-attachment: fixed;
+    color: red;
+    /* This line will change the text color to red */
+}
+
+.center {
+    text-align: center;
+}
