@@ -27,11 +27,11 @@ def home_page():
     st.image('app_image.png', use_column_width=True)
     st.button("About Us")
     
-    st.title("Welcome to [Team Name]")
+    st.title("Welcome to SnoozZ Insights")
     st.write("""
-    In today’s fast-paced world, a good night’s sleep is more than a luxury; it’s a cornerstone of health and happiness. [Team Name] is designed to be your companion in the quest for restful nights and energized mornings.
+    In today’s fast-paced world, a good night’s sleep is more than a luxury; it’s a cornerstone of health and happiness. SnoozZ Insights is designed to be your companion in the quest for restful nights and energized mornings.
 
-    Our app doesn’t just track your sleep; it transforms it. By harnessing the power of advanced analytics and personalized insights, [Team Name] offers a comprehensive overview of your sleep patterns. Understand the phases of your slumber, identify disturbances, and receive tailored advice to enhance the quality of your rest.
+    Our app doesn’t just track your sleep; it transforms it. By harnessing the power of advanced analytics and personalized insights, SnoozZ Insights offers a comprehensive overview of your sleep patterns. Understand the phases of your slumber, identify disturbances, and receive tailored advice to enhance the quality of your rest.
     """)
 
 # Streamlit app
